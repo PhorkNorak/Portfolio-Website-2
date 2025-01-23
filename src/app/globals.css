@@ -2,20 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+  }
+ 
+  .dark {
+    --background: 222.2 47.4% 11.2%;
+    --foreground: 213 31% 91%;
   }
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Theme transitions */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Gradient animation */
+@keyframes gradient-xy {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-gradient-xy {
+  animation: gradient-xy 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(20px, 0);
+  }
+  75% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400/50 dark:bg-gray-500/50 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400/70 dark:bg-gray-500/70;
+}
+
+/* Form styles */
+input, textarea {
+  @apply px-4 py-2;
+}
+
+input:focus, textarea:focus {
+  @apply outline-none ring-2 ring-blue-500;
+}
+
+button {
+  @apply transition-all duration-200;
+}
+
+/* Link transitions */
+a {
+  @apply transition-colors duration-200;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-blue-500/30 text-current;
+}
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Base styles */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply min-h-screen overflow-x-hidden bg-background text-foreground;
 }
