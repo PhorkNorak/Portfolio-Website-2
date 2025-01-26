@@ -2,7 +2,8 @@
 const nextConfig = {
   output: 'export',
   distDir: 'out',
-    images: {
+  images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
