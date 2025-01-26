@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-  images: {
+  output: 'export',
+  distDir: 'out',
+    images: {
     remotePatterns: [
       {
         protocol: 'https',
