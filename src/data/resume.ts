@@ -96,12 +96,13 @@ export const experience = [
   {
     title: "AI Tutor",
     company: "WEAVE Japan, ME-NEXT Program",
-    period: "Dec 2024 - Present",
+    period: "Nov 2024 - Jan 2025",
     type: "Remote, Part-time",
     responsibilities: [
       "Taught students to use AI tools to assist in daily usage, research, digital marketing & SEO",
       "Guided student through hands-on projects, enabling them to build functional website by using AI",
     ],
+    image: "/projects/MENEXT.jpg"
   },
   {
     title: "Ticket Operator",
