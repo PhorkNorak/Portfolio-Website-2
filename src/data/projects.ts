@@ -7,7 +7,7 @@ export const projects: Project[] = [
     title: 'Personal Financial Analyst',
     description: 'A financial management system with secure authentication and data visualization.',
     technologies: ['Django', 'PostgreSQL', 'ReactJS'],
-    category: 'Web Development',
+    category: ['Web Development', 'Data Science'],
     image: '/projects/personal financial analyst.png',
     demoVideo: 'https://www.youtube.com/embed/FxbgWYSxOqg', // Replace with your actual video ID
     details: {
@@ -33,14 +33,14 @@ export const projects: Project[] = [
     description: 'A facial recognition system for secure authentication using deep learning.',
     technologies: ['Python', 'TensorFlow', 'OpenCV', 'Django', 'PostgreSQL'],
     category: 'AI/ML',
-    image: '/projects/Face Recognition.png',
+    image: '/projects/face recognition.png',
     researchPaperImage: '/projects/Research Paper.png',
     demoVideo: 'https://www.youtube.com/embed/XZRxHnwuneM',
     details: {
       overview: 'A robust facial recognition system for secure authentication in the Quantum Era.',
       features: [
         'Facial recognition authentication',
-        'Deep learning algorithms',
+        'Machine learning and Deep learning algorithms',
         'Secure user verification',
       ],
       technicalDetails: [
@@ -49,6 +49,45 @@ export const projects: Project[] = [
         'PostgreSQL database',
         'Advanced ML algorithms',
       ],
+      comparisonTable: {
+        metrics: [
+          {
+            name: 'Real time Accuracy',
+            lbph: '66%',
+            inceptionResNet: '98%'
+          },
+          {
+            name: 'Processing Speed',
+            lbph: 'Fast (Real-time on CPU)',
+            inceptionResNet: 'Slower (Real-time with GPU acceleration)'
+          },
+          {
+            name: 'Model Size',
+            lbph: '33.5 MB',
+            inceptionResNet: '298 MB'
+          },
+          {
+            name: 'Training Time',
+            lbph: '1min',
+            inceptionResNet: '5h (Google Colab), 5min (GPU NVIDIA RTX 4060)'
+          },
+          {
+            name: 'Computational Resources',
+            lbph: 'Low (CPU, 8 GB RAM)',
+            inceptionResNet: 'High (GPU, 16+ GB RAM)'
+          },
+          {
+            name: 'Hardware Requirements',
+            lbph: 'No GPU required, run on CPU',
+            inceptionResNet: 'Requires GPU for efficient processing'
+          },
+          {
+            name: 'Security',
+            lbph: 'Moderate',
+            inceptionResNet: 'High'
+          }
+        ]
+      },
       achievements: [
         'Awarded 1st Prize at the 7th Engineering Day Awards 2024',
       ],
@@ -91,7 +130,7 @@ export const projects: Project[] = [
     description: 'A comprehensive education platform with user roles for admin, instructor, and student.',
     technologies: ['Next.js', 'PostgreSQL'],
     category: 'Web Development',
-    image: '/projects/Eduhub.png',
+    image: '/projects/EduHub.png',
     // demoVideo: 'https://www.youtube.com/embed/xyz789', // Replace xyz789 with your actual video ID
     details: {
       overview: 'EduHub is an educational platform that facilitates course management and learning.',
@@ -117,7 +156,7 @@ export const projects: Project[] = [
     description: 'An integrated system for managing orders and pawn transactions.',
     technologies: ['FastAPI', 'Next.js', 'PostgreSQL', 'Docker'],
     category: 'Web Development',
-    image: '/projects/Diamond Shop.png',
+    image: '/projects/diamond shop.png',
     // demoVideo: 'https://www.youtube.com/embed/FxbgWYSxOqg',
     details: {
       overview: 'A comprehensive management system for diamond shop operations.',
@@ -141,7 +180,7 @@ export const projects: Project[] = [
     title: 'Loan Prediction System',
     description: 'An AI-powered system for loan risk assessment and prediction.',
     technologies: ['Django', 'PostgreSQL', 'TensorFlow'],
-    category: 'AI/ML',
+    category: ['AI/ML', 'Data Science'],
     image: '/projects/Coming Soon.png',
     // image: '/projects/meme.jpg',
     // demoVideo: 'https://www.youtube.com/embed/FxbgWYSxOqg',

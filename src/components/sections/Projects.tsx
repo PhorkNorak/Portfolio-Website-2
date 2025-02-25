@@ -14,7 +14,10 @@ export default function Projects() {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const filteredProjects = projects.filter(project => 
-    selectedCategory === "All" ? true : project.category === selectedCategory
+    selectedCategory === "All" ? true : 
+    Array.isArray(project.category) 
+      ? project.category.includes(selectedCategory)
+      : project.category === selectedCategory
   );
 
   return (

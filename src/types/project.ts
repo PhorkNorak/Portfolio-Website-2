@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
-  category: string;
+  category: string | string[];
   image: string;
   demoVideo?: string;
   researchPaperImage?: string;
@@ -13,6 +13,13 @@ export interface Project {
     features: string[];
     technicalDetails: string[];
     achievements?: string[];
+    comparisonTable?: {
+      metrics: Array<{
+        name: string;
+        lbph: string;
+        inceptionResNet: string;
+      }>;
+    };
   };
   date: string;
 }
