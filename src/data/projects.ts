@@ -30,7 +30,7 @@ export const projects: Project[] = [
   {
     id: 'facial-recognition',
     title: 'Facial Recognition for Secured Authentication',
-    description: 'A facial recognition system for secure authentication using deep learning.',
+    description: 'A facial recognition system for secure authentication using deep learning. Lead by Dr. Khim Chamroeun',
     technologies: ['Python', 'TensorFlow', 'OpenCV', 'Django', 'PostgreSQL'],
     category: 'AI/ML',
     image: '/projects/face recognition.png',
@@ -153,7 +153,7 @@ export const projects: Project[] = [
   {
     id: 'diamond-shop',
     title: 'Diamond Shop Management System',
-    description: 'An integrated system for managing orders and pawn transactions.',
+    description: 'An integrated system for managing orders and pawn transactions. Lead by Dr. Khim Chamroeun',
     technologies: ['FastAPI', 'Next.js', 'PostgreSQL', 'Docker'],
     category: 'Web Development',
     image: '/projects/diamond shop.png',
