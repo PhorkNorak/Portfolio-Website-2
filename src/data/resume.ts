@@ -80,7 +80,7 @@ export const certifications = [
 export const achievements = [
   {
     title: "1st Award for Facial Recognition Project",
-    description: "Won the 1st Award for 'Facial Recognition for Secured Authentication in the Quantum Era' at the 7th Engineering Day Awards 2024.",
+    description: "Won the 1st Award for 'Facial Recognition for Secured Authentication in the Quantum Era' at the 7th Engineering Day Awards 2024. Lead by Dr. Khim Chamroeun",
     date: "2024",
     image: "/projects/1st Award for Facial Recognition Project.jpg"
   },
