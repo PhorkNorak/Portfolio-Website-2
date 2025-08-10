@@ -94,6 +94,61 @@ export const achievements = [
 
 export const experience = [
   {
+    title: "Guest Speaker (Remote)",
+    company: "UN WOMEN AI SCHOOL",
+    period: "22 July 2025",
+    type: "Remote, Speaker",
+    responsibilities: [
+      "Delivered a lecture on Small Language Models (SLMs), RAG, and privacy-first AI.",
+      "Ran a hands-on session on setting up local AI models with Ollama and Gradio.",
+    ],
+    image: "/projects/About_Me/UN WOMEN AI.png",
+  },
+  {
+    title: "Guest Speaker (Remote)",
+    company: "UN 2.0 Week — United Nations",
+    period: "9 June 2025",
+    type: "Remote, Speaker",
+    responsibilities: [
+      "Presented on Cambodian youth-led AI innovation using open-source solutions.",
+      "Shared insights on ethical and community-focused AI development.",
+    ],
+    image: "/projects/About_Me/un week 2.0.jpg",
+  },
+  {
+    title: "Guest Speaker (Remote)",
+    company: "COPAI Hub 9",
+    period: "29 May 2025",
+    type: "Remote, Speaker",
+    responsibilities: [
+      "Demonstrated an AI-enabled knowledge base built with open-source tools.",
+      "Showcased frugal AI innovation supported by MISTI's HPC platform.",
+    ],
+    image: "/projects/About_Me/HUB_9.png",
+  },
+  {
+    title: "Lead AI Research and Innovation",
+    company: "COPAI AI Innovation Lab",
+    period: "Mar 2025 - Jul 2025",
+    type: "Full-time",
+    responsibilities: [
+      "Built a local AI ecosystem knowledge base using RAG with Cambodian data.",
+      "Led development of a Khmer-focused AI chatbot on MISTI's HPC platform.",
+    ],
+    image: "/projects/About_Me/MISTI.png",
+  },
+  {
+    title: "Teacher Assistant – Year 1 & Year 2 Courses",
+    company: "Royal University of Phnom Penh",
+    period: "Apr 2025 - Present",
+    type: "Part-time, On-site",
+    responsibilities: [
+      "Assisted in teaching SQL, C++, Python programming, and data science fundamentals.",
+      "Supported labs, assignments, and student projects.",
+    ],
+    image: "/projects/About_Me/Teacher_asst.png",
+  },
+  {
     title: "AI Tutor",
     company: "WEAVE Japan, ME-NEXT Program",
     period: "Nov 2024 - Jan 2025",

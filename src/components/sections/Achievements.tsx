@@ -11,7 +11,7 @@ export default function Achievements() {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   return (
-    <section id="achievements" className="py-4 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+    <section id="achievements" className="py-4 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function Achievements() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-700 rounded-lg shadow-sm overflow-hidden flex h-full"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden flex h-full"
             >
               {achievement.image && (
                 <div 

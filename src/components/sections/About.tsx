@@ -3,11 +3,39 @@
 import { motion } from 'framer-motion';
 import { FaTrophy, FaUserGraduate, FaCode, FaLightbulb } from 'react-icons/fa';
 import { achievements } from '@/data/resume';
-import Image from 'next/image';
+ import Image from 'next/image';
+ import { useState, useEffect } from 'react';
 
 export default function About() {
+  const aboutMePhotos = [
+    '/projects/About_Me/un.jpg',
+    '/projects/About_Me/un week 2.0.jpg',
+    '/projects/About_Me/UN WOMEN.png',
+    '/projects/About_Me/UN WOMEN AI.png',
+    '/projects/About_Me/HUAWEI ICT COMPETITION National Final CAMBODIA.jpg',
+    '/projects/About_Me/HUB_9.png',
+    '/projects/About_Me/MISTI.png',
+    '/projects/About_Me/mis.png',
+    '/projects/About_Me/E_day.png',
+    '/projects/About_Me/eday.png',
+    '/projects/About_Me/Teacher_asst.png',
+  ];
+
+  const [currentPhoto, setCurrentPhoto] = useState(0);
+
+  // Auto-advance every 3 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentPhoto((prev) => (prev + 1) % aboutMePhotos.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [aboutMePhotos.length]);
+
+  const goPrev = () => setCurrentPhoto((prev) => (prev - 1 + aboutMePhotos.length) % aboutMePhotos.length);
+  const goNext = () => setCurrentPhoto((prev) => (prev + 1) % aboutMePhotos.length);
+
   return (
-    <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         {/* SEO-optimized header */}
         <motion.div
@@ -23,6 +51,46 @@ export default function About() {
           <p className="mt-4 text-xl leading-8 text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             A passionate Data Science and Engineering student with a focus on AI innovation and web development
           </p>
+          {/* Photo Carousel - directly under description */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mb-12 flex flex-col items-center"
+          >
+            <div className="relative w-full max-w-lg aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+              <button
+                onClick={goPrev}
+                className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 dark:bg-gray-900/70 rounded-full p-2 hover:bg-blue-500 hover:text-white transition-colors"
+                aria-label="Previous photo"
+              >
+                &#8592;
+              </button>
+              <Image
+                src={aboutMePhotos[currentPhoto]}
+                alt={`About Me Photo ${currentPhoto + 1}`}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+              <button
+                onClick={goNext}
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 dark:bg-gray-900/70 rounded-full p-2 hover:bg-blue-500 hover:text-white transition-colors"
+                aria-label="Next photo"
+              >
+                &#8594;
+              </button>
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+                {aboutMePhotos.map((_, idx) => (
+                  <span
+                    key={idx}
+                    className={`w-2 h-2 rounded-full ${idx === currentPhoto ? 'bg-blue-500' : 'bg-gray-400 dark:bg-gray-700'} inline-block`}
+                  />
+                ))}
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* Key points */}

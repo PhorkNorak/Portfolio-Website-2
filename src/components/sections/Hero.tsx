@@ -38,7 +38,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <Card className="w-full mx-4 md:mx-auto max-w-7xl h-[calc(100vh-8rem)] bg-white/80 dark:bg-black relative overflow-hidden backdrop-blur-sm">
+      <Card className="w-full mx-4 md:mx-auto max-w-7xl h-[calc(100vh-8rem)] bg-white/80 dark:bg-black relative overflow-hidden lg:backdrop-blur-sm">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20 bg-white dark:bg-gray-900"
         />
@@ -86,9 +86,7 @@ export default function Hero() {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="max-w-2xl text-lg text-gray-600 dark:text-gray-300"
               >
-                Enthusiastic software developer using AI tools to enhance project capabilities and 
-                boost productivity. Experienced in creating user-friendly and scalable applications 
-                with modern technologies.
+An AI Engineer and Data Scientist passionate about building robust, scalable, and innovative solutions. Experienced in web development, ML, DL, LLM, RAG, and data analytic. Open to collaboration and new opportunities.
               </motion.p>
 
               <motion.div
@@ -142,10 +140,13 @@ export default function Hero() {
           </div>
 
           {/* Right content */}
-          <div className="flex-1 relative hidden md:block">
+          <div className="flex-1 relative hidden lg:block">
             <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
+              lazy={true}
+              idleDelayMs={1200}
+              minWidthToMount={1024}
             />
           </div>
         </div>

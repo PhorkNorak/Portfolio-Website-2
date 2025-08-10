@@ -59,7 +59,7 @@ export default function Skills() {
               viewport={{ once: true }}
               className="flex flex-col items-center"
             >
-              <div className="rounded-xl bg-white dark:bg-gray-700 p-6 shadow-lg w-full hover:shadow-xl transition-shadow duration-300">
+              <div className="rounded-xl bg-white dark:bg-gray-800 p-6 shadow-lg w-full hover:shadow-xl transition-shadow duration-300">
                 <div className="flex flex-col items-center space-y-4">
                   <skill.icon className="h-12 w-12 text-blue-500" />
                   <div className="text-center">
