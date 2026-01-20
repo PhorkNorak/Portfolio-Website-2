@@ -11,7 +11,7 @@ export default function Experience() {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   return (
-    <section id="experience" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+    <section id="experience" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ export default function Experience() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {/* Work Experience */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -41,7 +41,7 @@ export default function Experience() {
               <FaBriefcase className="text-3xl text-blue-600 dark:text-blue-400" />
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Work Experience</h3>
             </div>
-            <div className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {experience.map((exp, index) => (
                 <motion.div
                   key={index}
@@ -49,9 +49,8 @@ export default function Experience() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="relative pl-8 before:content-[''] before:absolute before:left-[0.5px] before:top-2 before:w-0.5 before:h-full before:bg-blue-600"
+                  className="rounded-lg border border-gray-200 dark:border-gray-700 p-4"
                 >
-                  <div className="absolute left-0 top-2 w-2 h-2 rounded-full bg-blue-600" />
                   <div className="flex flex-col gap-4">
                     <div className="flex items-start gap-3">
                       <FaBriefcase className="text-xl text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
@@ -74,7 +73,7 @@ export default function Experience() {
                     </div>
                     {exp.image && (
                       <div 
-                        className="relative w-48 h-32 rounded-lg overflow-hidden ml-8 cursor-pointer hover:opacity-90 transition-opacity"
+                        className="relative w-48 h-32 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                         onClick={() => setSelectedImage({ src: exp.image!, alt: exp.title })}
                       >
                         <Image
@@ -104,7 +103,7 @@ export default function Experience() {
               <FaHandsHelping className="text-3xl text-blue-600 dark:text-blue-400" />
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Volunteer Experience</h3>
             </div>
-            <div className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {volunteerExperience.map((exp, index) => (
                 <motion.div
                   key={index}
@@ -112,9 +111,8 @@ export default function Experience() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="relative pl-8 before:content-[''] before:absolute before:left-[0.5px] before:top-2 before:w-0.5 before:h-full before:bg-blue-600"
+                  className="rounded-lg border border-gray-200 dark:border-gray-700 p-4"
                 >
-                  <div className="absolute left-0 top-2 w-2 h-2 rounded-full bg-blue-600" />
                   <div className="flex flex-col gap-4">
                     <div className="flex items-start gap-3">
                       <FaHandsHelping className="text-xl text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
@@ -137,7 +135,7 @@ export default function Experience() {
                     </div>
                     {exp.image && (
                       <div 
-                        className="relative w-48 h-32 rounded-lg overflow-hidden ml-8 cursor-pointer hover:opacity-90 transition-opacity"
+                        className="relative w-48 h-32 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                         onClick={() => setSelectedImage({ src: exp.image!, alt: exp.title })}
                       >
                         <Image

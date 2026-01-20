@@ -28,6 +28,9 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/favicon.ico" />
+        {/* Resource hints for Spline 3D scene */}
+        <link rel="dns-prefetch" href="https://prod.spline.design" />
+        <link rel="preconnect" href="https://prod.spline.design" crossOrigin="" />
         <title>Phork Norak - Data Scientist Portfolio</title>
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100`} suppressHydrationWarning>

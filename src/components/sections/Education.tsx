@@ -41,7 +41,7 @@ export default function Education() {
     : certifications.filter(cert => cert.category === selectedCategory);
 
   return (
-    <section id="education" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <section id="education" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ export default function Education() {
             className={`px-6 py-2.5 rounded-full text-base font-medium transition-all duration-300 flex items-center gap-2 ${
               activeTab === 'education'
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700'
             }`}
           >
             <FaGraduationCap />
@@ -76,7 +76,7 @@ export default function Education() {
             className={`px-6 py-2.5 rounded-full text-base font-medium transition-all duration-300 flex items-center gap-2 ${
               activeTab === 'certifications'
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700'
             }`}
           >
             <FaCertificate />
@@ -94,7 +94,7 @@ export default function Education() {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}

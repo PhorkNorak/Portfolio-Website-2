@@ -21,7 +21,7 @@ export default function Projects() {
   );
 
   return (
-    <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+    <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export default function Projects() {
               className={`px-4 py-2 rounded-full text-sm font-medium ${
                 selectedCategory === category
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                  : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700'
               }`}
             >
               {category}
@@ -63,10 +63,10 @@ export default function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden"
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
               >
                 <Link href={`/projects/${project.id}`}>
-                  <div className="aspect-w-16 aspect-h-9 bg-gray-200 dark:bg-gray-600">
+                  <div className="aspect-w-16 aspect-h-9 bg-gray-200 dark:bg-gray-700">
                     {project.image && (
                       <div 
                         onClick={(e) => {
@@ -96,7 +96,7 @@ export default function Projects() {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full"
+                          className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-full"
                         >
                           {tech}
                         </span>
